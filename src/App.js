@@ -11,10 +11,9 @@ function App() {
     <>
       <div className="h-screen w-screen bg-gray-100">
         <Routes>
-          <Route path="/" element={<Navbar />} />
           <Route path="/" element={<Status />} />
-          <Route path="/" element={<Form />} />
-          <Route path="/" element={<PackingList />} />
+          <Route path="/Form" element={<Form />} />
+          <Route path="/PakingList" element={<PackingList />} />
         </Routes>
       </div>
     </>
