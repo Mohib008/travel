@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "./navbar";
 
 const initialItems = [
   {
@@ -43,8 +44,25 @@ const initialItems = [
   },
 ];
 
-function PackingList() {
-  return <div>PackingList</div>;
+function PackingList({ items = initialItems }) {
+  return (
+    <div>
+      <h2>Packing List</h2>
+      <ul>
+        {items.map((item) => (
+          <li key={item.id}>
+            <input
+              type="checkbox"
+              checked={item.packed}
+              onChange={initialItems}
+            />
+            {item.item}
+          </li>
+        ))}
+        ;
+      </ul>
+    </div>
+  );
 }
 
 export default PackingList;
